@@ -1,0 +1,1 @@
+This project will create a docker image for nginx with user defined content and deploy it using kubernetes statefulset.
