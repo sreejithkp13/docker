@@ -19,7 +19,7 @@ pipeline{
                 script {
                     sh('echo $dockerhub_PSW | docker login -u  $dockerhub_USR --password-stdin')                //  login to dockerhub for running docker scan 
                     sh('docker scan yougovnginx:latest --severity high')                                        //  scanning docker images for vulnerabilities using docker scan
-                    sh('curl -s https://ci-tools.anchore.io/inline_scan-v0.6.0 | bash -s yougovnginx:latest')   //  scanning docker images for vulnerabilities using docker anchore
+               //     sh('curl -s https://ci-tools.anchore.io/inline_scan-v0.6.0 | bash -s yougovnginx:latest')   //  scanning docker images for vulnerabilities using docker anchore
                 }
                 echo "Scan is Successful"
            }
